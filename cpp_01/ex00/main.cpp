@@ -5,7 +5,7 @@ void	ponyOnTheHeap(const std::string &name)
 	std::cout << "There is ponyOnTheHeap!" << std::endl;
 	Pony *pony_heap = new Pony (name, "Grey", 5);
 	pony_heap->pony_intro();
-	delete(pony_heap);
+	delete pony_heap;
 }
 
 void	ponyOnTheStack(const std::string &name)
