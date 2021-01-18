@@ -8,9 +8,10 @@ private:
 	std::string	name;
 	std::string	type;
 public:
-	Zombie(const std::string &newName, const std::string &newType);
+	Zombie();
 	~Zombie();
 	void	announce();
+	void	setZombieName(const std::string &newName);
 };
 
 #endif

@@ -6,9 +6,9 @@
 class ZombieHorde {
 private:
 	int	n;
-	Zombie **zombie;
+	Zombie * zombie_arr;
 public:
-	ZombieHorde(int N);
+	ZombieHorde(int newN);
 	~ZombieHorde();
 	void	announce();
 };

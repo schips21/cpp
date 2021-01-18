@@ -10,6 +10,7 @@
 
 int main(){
 	ZombieHorde horde = ZombieHorde(5);
+	horde.ZombieHorde::announce();
 //	event.setZombieType("Perfect zombie");
 //	Zombie *zombie_heap = event.newZombie("Oleg");
 //	zombie_heap->announce();
