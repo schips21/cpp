@@ -1,6 +1,6 @@
-NAME = replace
+NAME = phonebook
 
-SRCS = replace.cpp
+SRCS = phonebook.cpp phonebook_utils.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -17,6 +17,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-
+.PHONY: all clean fclean re
 
 re: fclean all

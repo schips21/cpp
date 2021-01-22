@@ -1,6 +1,6 @@
-NAME = replace
+NAME = megaphone
 
-SRCS = replace.cpp
+SRCS = megaphone.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -17,6 +17,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-
+.PHONY: all clean fclean re
 
 re: fclean all
