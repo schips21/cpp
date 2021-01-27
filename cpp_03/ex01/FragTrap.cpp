@@ -77,11 +77,11 @@ void	FragTrap::beRepaired(unsigned int amount){
 	if (_hit_points >= 100){
 		_hit_points = 100;
 	}
-    std::cout << "FR4G-TP " << _name << " has repaired to HP "
-    << _hit_points << "! Happy he becomes more healthier!" << std::endl;
+	std::cout << "FR4G-TP " << _name << " has repaired to HP "
+	<< _hit_points << "! Happy he becomes more healthier!" << std::endl;
 }
 
-void    FragTrap::vaulthunter_dot_exe(std::string const & target){
+void	FragTrap::vaulthunter_dot_exe(std::string const & target){
 	srand(time(0));
 	std::string attacks_arr[5] = {"throw snowballs", "pour water over", "tell a joke",
 	"sing a song", "make to dance"};

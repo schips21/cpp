@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(){
+FragTrap::FragTrap() : ClapTrap(){
 	_hit_points = 100;
 	_max_hit_points = 100;
 	_energy_points = 100;
@@ -13,7 +13,8 @@ FragTrap::FragTrap(){
     std::cout << "Default FR4G-TP was born!" << std::endl;
 }
 
-FragTrap::FragTrap(const std::string& name) : _name(name){
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name){
+	_name = name;
     _hit_points = 100;
     _max_hit_points = 100;
     _energy_points = 100;
@@ -25,7 +26,7 @@ FragTrap::FragTrap(const std::string& name) : _name(name){
     std::cout << "FR4G-TP " << _name << " was born!" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& other){
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other._name){
 	std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 }
@@ -60,28 +61,7 @@ void	FragTrap::meleeAttack(std::string const & target){
     << " points of damage! Boooo!" << std::endl;
 }
 
-void	FragTrap::takeDamage(unsigned int amount){
-	_hit_points -= (amount - _armor_dr);
-	if (_hit_points <= 0){
-		_hit_points = 0;
-		std::cout << "FR4G-TP" << _name << " has died! Oh no!!!!" << std::endl;
-	}
-	else{
-		std::cout << "FR4G-TP " << _name << " lost "
-		<< amount - _armor_dr << " points by attack:((( His HP now is " << _hit_points  << std::endl;
-	}
-}
-
-void	FragTrap::beRepaired(unsigned int amount){
-	_hit_points += amount;
-	if (_hit_points >= 100){
-		_hit_points = 100;
-	}
-    std::cout << "FR4G-TP " << _name << " has repaired to HP "
-    << _hit_points << "! Happy he becomes more healthier!" << std::endl;
-}
-
-void    FragTrap::vaulthunter_dot_exe(std::string const & target){
+void	FragTrap::vaulthunter_dot_exe(std::string const & target){
 	srand(time(0));
 	std::string attacks_arr[5] = {"throw snowballs", "pour water over", "tell a joke",
 	"sing a song", "make to dance"};
