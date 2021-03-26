@@ -1,7 +1,7 @@
 #include "AssaultTerminator.hpp"
 #include "Squad.hpp"
 #include "TacticalMarine.hpp"
-
+//привет
 int main()
 {
 	ISpaceMarine* bob = new TacticalMarine;
